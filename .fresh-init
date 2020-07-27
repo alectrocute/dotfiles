@@ -1,0 +1,8 @@
+#!/bin/sh
+sudo -s;
+apt-get update;
+apt-get upgrade -y;
+apt-get install build-essentials nodejs npm -y;
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash;
+nvm install 12;
+nvm use 12;
