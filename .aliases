@@ -1,2 +1,4 @@
-alias dockerutil-rmall="sudo docker rm -f $(sudo docker ps -aq) >/dev/null 2>&1 || true"
-alias dockerutil-rmimages="sudo docker rmi -f $(sudo docker images -q)"
+# docker shortcuts
+alias dockerutil-rmall="docker rm -f $(docker ps -aq)"
+alias dockerutil-rmimages="docker rmi -f $(docker images -aq)"
+alias dockerutil-stopall="docker stop $(docker ps -aq)"
