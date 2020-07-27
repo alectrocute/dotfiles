@@ -1,9 +1,12 @@
+# always use single quotations!
+# double will run command on initialization (could be super bad)
+
 # docker
-alias dockerutil-rmall="docker rm -f $(docker ps -aq) > /dev/null 2>&1"
-alias dockerutil-rmimages="docker rmi -f $(docker images -aq) > /dev/null 2>&1"
-alias dockerutil-stopall="docker stop $(docker ps -aq) > /dev/null 2>&1"
+alias dockerutil-rmall='sudo docker rm -f $(sudo docker ps -aq) > /dev/null 2>&1'
+alias dockerutil-rmimages='sudo docker rmi -f $(sudo docker images -aq) > /dev/null 2>&1'
+alias dockerutil-stopall='sudo docker stop $(sudo docker ps -aq) > /dev/null 2>&1'
 
 # qemu for macos
 # container id: 0845cbc9653f
-alias macos-start="sudo docker start 0845cbc9653f > /dev/null 2>&1"
-alias macos-stop="sudo docker stop 0845cbc9653f > /dev/null 2>&1"
+alias macos-start='sudo docker start 0845cbc9653f > /dev/null 2>&1'
+alias macos-stop='sudo docker stop 0845cbc9653f > /dev/null 2>&1'
